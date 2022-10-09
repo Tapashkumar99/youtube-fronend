@@ -20,6 +20,7 @@ const Homepage = () => {
 
   const fetchDataIds = async () => {
     let { data } = await axios.get(`http://localhost:3000/subscribers/${id}`);
+    // console.log(data)
     setIds(data);
   };
 
@@ -40,7 +41,7 @@ const Homepage = () => {
       <div className="header px-2 py-3">
         <nav className="navbar navbar-expand-lg bg-dark">
           <div className="container-fluid">
-            <a className="navbar-brand align-middle" href="#">
+            <a className="navbar-brand align-middle">
               <i className="fa-brands fa-youtube px-1"></i>
               Youtube
             </a>
@@ -105,7 +106,7 @@ const Homepage = () => {
               aria-label="id"
               value={id}
               onChange={(event) => setId(event.target.value)}
-              style={{heigth:"1rem"}}
+              style={{heigth:"1rem",width:"15rem",borderRadius:"0.5rem",borderColor:"rgb(42, 45, 48)"}}
             />
             <button type="submit" className="btn btn-danger" onClick={showIds}>
               Search
@@ -124,6 +125,7 @@ const Homepage = () => {
                   Subscribed Channel : {item.subscribedChannel}
                   <br />
                   Subscribed Date : {item.subscribedDate}
+                  
                 </p>
               </div>
             ))}

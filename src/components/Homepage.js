@@ -3,10 +3,15 @@ import "./Homepage.css";
 import axios from "axios";
 
 const Homepage = () => {
+
+// Using Use state hook to handle response of API
+
   const [subs, setSubs] = useState([]);
   const [names, setNames] = useState([]);
   const [ids, setIds] = useState([]);
   const [id, setId] = useState([]);
+
+// Fetching Data from API
 
   const fetchDataSub = async () => {
     let { data } = await axios.get("http://localhost:3000/subscribers");
@@ -20,9 +25,10 @@ const Homepage = () => {
 
   const fetchDataIds = async () => {
     let { data } = await axios.get(`http://localhost:3000/subscribers/${id}`);
-    // console.log(data)
     setIds(data);
   };
+
+//  On Click event handler
 
   const showDataSub = () => {
     fetchDataSub();
@@ -36,6 +42,8 @@ const Homepage = () => {
     fetchDataIds();
   };
 
+//  Main Page
+ 
   return (
     <div>
       <div className="header px-2 py-3">
@@ -48,6 +56,9 @@ const Homepage = () => {
           </div>
         </nav>
       </div>
+
+      {/* Button to show all sunscribers data */}
+      
       <div className="container text-center text-light">
         <div className="row">
           <div className="col">
@@ -76,6 +87,9 @@ const Homepage = () => {
               </div>
             ))}
           </div>
+
+          {/* Button to show Subscriber name and channel */}
+
           <div className="col">
             <button
               type="button"
@@ -98,6 +112,9 @@ const Homepage = () => {
               </div>
             ))}
           </div>
+
+          {/* Search box for searching ID */}
+
           <div className="col">
             <input
               type="text"

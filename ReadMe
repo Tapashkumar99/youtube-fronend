@@ -1,0 +1,12 @@
+How to use this WebApp.
+
+1. Start Backend Server and test api in postman.
+
+2. Now run "npm start" . 
+
+3. Click on All Subscriber to get data of all Subscribers.
+
+4. Click on Subscriber names and channel to get all the names and channel subscribed.
+
+5. Now, enter id of subscriber in search box and click search to get detal of that specific subscriber.
+

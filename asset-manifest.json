@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/youtube-frontend/static/css/main.3c2257c6.css",
+    "main.js": "/youtube-frontend/static/js/main.afa00df3.js",
+    "index.html": "/youtube-frontend/index.html",
+    "main.3c2257c6.css.map": "/youtube-frontend/static/css/main.3c2257c6.css.map",
+    "main.afa00df3.js.map": "/youtube-frontend/static/js/main.afa00df3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c2257c6.css",
+    "static/js/main.afa00df3.js"
+  ]
+}
